@@ -1,0 +1,6 @@
+{
+  "bbc": "http://feeds.bbci.co.uk/news/rss.xml",
+  "cnn": "http://rss.cnn.com/rss/edition.rss",
+  "fox": "http://feeds.foxnews.com/foxnews/latest",
+  "ny_times": "http://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+}
