@@ -3,7 +3,10 @@ News Reader
 Upload latest news to database.
 ##Configurations:<br>
 Python v.**3.6.1**,
-pip **9.0.1**
+pip v**9.0.1**,
+mongodb v**3.4.3**
+<br>
+How to install[mongodb](https://docs.mongodb.com/manual/installation/#tutorials)
 ```
 # install pymongo, feedparser
 python3 -m pip install pymongo
