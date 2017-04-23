@@ -1,12 +1,13 @@
 News Reader
 ==============
 Upload latest news to database.
-##Configurations:<br>
+
+##Configurations:
 Python v.**3.6.1**,
 pip v**9.0.1**,
 mongodb v**3.4.3**
-<br>
-How to install[mongodb](https://docs.mongodb.com/manual/installation/#tutorials)
+
+How to install [mongodb](https://docs.mongodb.com/manual/installation/#tutorials)
 ```
 # install pymongo, feedparser
 python3 -m pip install pymongo
@@ -24,7 +25,7 @@ mongo
 ```
 Then you can just add urls for rss in rssUrls.json file
 and run main.py for latest news.
-<br><br>
+
 ##Example
 ```
 python3 main.py
