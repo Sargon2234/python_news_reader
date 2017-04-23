@@ -2,7 +2,7 @@ News Reader
 ==============
 Upload latest news to database.
 
-##Configurations:
+## Configurations:
 
 Python v.**3.6.1**,
 pip v**9.0.1**,
@@ -27,14 +27,14 @@ mongo
 Then you can just add urls for rss in rssUrls.json file
 and run main.py for latest news.
 
-##Example
+## Example
 
 ```
 python3 main.py
 ```
 Which will load latest news of every rss url from file "rssUrls.json" to mongo collection 'news_services'.
 <br><br>
-##To test:
+## To test:
 
 ```
 # In mongo shell
