@@ -5,22 +5,23 @@ import json
 
 
 class NewsReader:
-    def __init__(self, service):
+    def __init__(self):
         self.data = Database('localhost', 27017)
         self.connection = self.data.buildConnection('news_services')
-        self.service = service
 
-    def finalFlow(self):
-        lookingUrl = self.getServiceUrl(self.service)
-        preparsedData = self.parseRss(lookingUrl)
-        parsedData = self.parseEntries(preparsedData)
-        return self.insertData(parsedData)
+    def getNews(self):
+        lookingUrls = self.getServicesUrl()
+        for service in lookingUrls:
+            self.service = service
+            preparsedData = self.parseRss(lookingUrls[service])
+            parsedData = self.parseEntries(preparsedData)
+            self.insertData(parsedData)
+            print('Inserted', service)
 
-    def getServiceUrl(self, service):
+    def getServicesUrl(self):
         with open('./rssUrls.json') as file:
             text = file.read()
-            decoded = json.loads(text)
-            return decoded[service]
+            return json.loads(text)
 
     def parseRss(self, url):
         return feedparser.parse(url)
@@ -53,7 +54,3 @@ class NewsReader:
 
     def insertData(self, data):
         self.data.insertBulk('news', data)
-
-
-a = NewsReader('ny_times')
-a.finalFlow()

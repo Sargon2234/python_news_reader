@@ -20,13 +20,13 @@ mongo
 > db.news.createIndex({title:1, date: 1}, {unique: true})
 ```
 Then you can just add urls for rss in rssUrls.json file
-and run reader.py with your service.
+and run main.py for latest news.
 <br><br>
 ##Example
 ```
-python3 reader.py
+python3 main.py
 ```
-Which will load latest news to mongo collection 'news_services'.
+Which will load latest news of every rss url from file "rssUrls.json" to mongo collection 'news_services'.
 <br><br>
 To test:
 ```
